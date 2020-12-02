@@ -32,8 +32,9 @@ public class Symmetry {
         String s = "hello";
 
         System.out.println(symmetry.equals(s));     // false  注意留意返回true
-        System.out.println(symmetry.equals(hello)); // true
         System.out.println(s.equals(symmetry));     // false
+        System.out.println(symmetry.equals(hello)); // true
+        System.out.println(hello.equals(symmetry)); // true
     }
 
 }

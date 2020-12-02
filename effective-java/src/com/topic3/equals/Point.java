@@ -20,6 +20,8 @@ public class Point {
         // 原生态 getclass()--测试equals()
         // 使用继承时，未考虑新增组件
         if (this == o) return true;
+        System.out.println(getClass());    //class com.topic3.equals.Point$A
+        System.out.println(o.getClass());       //class com.topic3.equals.Point$A
         if (o == null || getClass() != o.getClass()) return false;
         Point point = (Point) o;
         return x == point.x &&

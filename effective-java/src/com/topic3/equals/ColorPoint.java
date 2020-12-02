@@ -16,7 +16,7 @@ public class ColorPoint {
 
     @Override
     public boolean equals(Object o) {
-        // 如果 o 为ColorPoint的超类，直接false，因为未考虑新加入的组件，肯定不相等
+        // 如果 o 不是ColorPoint的实例【子类或其对象】，直接false
         if (!(o instanceof ColorPoint))
             return false;
         ColorPoint that = (ColorPoint) o;
@@ -26,8 +26,10 @@ public class ColorPoint {
 
     public static void main(String[] args) {
         ColorPoint a = new ColorPoint(1,2, 3);
+        ColorPoint c = new ColorPoint(1,2, 3);
         ColorPoint b = new ColorPoint(1, 2, 4);
 
         System.out.println(a.equals(b));  // false
+        System.out.println(a.equals(c));  // true
     }
 }

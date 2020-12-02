@@ -27,7 +27,7 @@ public class Main {
         List<String> list = new ArrayList<>();
 
         Predicate<String> pre = s -> list.add(s);
-        Consumer<String> con = s-> list.add(s);
+        Consumer<String> con = s -> list.add(s);
         // true
         System.out.println(pre.test("s"));
         // void can not resolve
@@ -39,8 +39,8 @@ public class Main {
         Comparator<String> comparator = (a, b) -> a.compareTo(b);
 
         /*
-        * Lambda可以使用局部变量，但是该变量必须是最终的或隐式最终的【不修改】
-        * */
+         * Lambda可以使用局部变量，但是该变量必须是最终的或隐式最终的【不修改】
+         * */
         int test = 100;
         Runnable r1 = () -> System.out.println(test);
         // lambda错误
@@ -52,8 +52,8 @@ public class Main {
 //        Supplier<String> supplier2 = () -> s::length;
 
         /*
-        * 方法引用
-        * */
+         * 方法引用
+         * */
         List<String> strs = Arrays.asList("a", "b", "c");
         // 默认实现 int compare(T o1, T o2);
         strs.sort((s1, s2) -> s1.compareToIgnoreCase(s2));
@@ -62,8 +62,8 @@ public class Main {
 
 
         /*
-        * 构造函数引用
-        * */
+         * 构造函数引用
+         * */
         // 1。 无参构造
         Supplier<Apple> c1 = Apple::new;
         Supplier<Apple> c2 = () -> new Apple();
@@ -78,6 +78,9 @@ public class Main {
         BiFunction<Integer, String, Apple> b3 = Apple::new;
         BiFunction<Integer, String, Apple> b4 = (w, c) -> new Apple(w, c);
         Apple a3 = b3.apply(100, "red");
+
+
+        /*整合实战*/
+
     }
-    
 }

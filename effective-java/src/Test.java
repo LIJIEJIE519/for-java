@@ -1,7 +1,4 @@
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class Test {
     public static void main(String[] args) {
@@ -12,6 +9,6 @@ public class Test {
         String d = "aaa";
         System.out.println(a == b);
         System.out.println(c == a);
-        HashSet
+
     }
 }
